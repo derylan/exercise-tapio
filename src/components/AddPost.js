@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { v4 as uuidv4} from 'uuid'
+import FormPost from './FormPost'
 
 const AddPost = () => {
 
@@ -38,6 +39,7 @@ const AddPost = () => {
     return (
         <div>
             <h2>Share some thoughts</h2>
+            <FormPost handlePost={handlePost} userName={userName} title={title} context={context}/>
         </div>
     )
 }   
