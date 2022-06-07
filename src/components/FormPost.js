@@ -3,7 +3,7 @@ import React from 'react'
 const FormPost = ( {handlePost, userName, title, context }) => {
     return (
         <>
-        <form>
+        <form className='grid'>
             <label htmlFor="uname">Author: </label>
             <input className='border-2 border-black rounded text-sky-500' type="text" id="uname" ref={userName} />
             <label htmlFor="title">Title: </label>

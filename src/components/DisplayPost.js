@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { AiFillDelete } from 'react-icons/ai';
 
-const DisplayPost = ({ post }) => {
+const DisplayPost = ({ post, onDelete }) => {
     return (
         <div>
             <ul className='grid grid-cols-5 h-auto w-auto p-2 border-2'>
                 <li>{post.firstInput}</li>
                 <li>{post.secondInput}</li>
                 <li>{post.thirdInput}</li>
+                <AiFillDelete style={{ color:'red', cursor:'pointer'}} 
+                onClick={() => onDelete(post.id)}/>
             </ul>
         </div>
     )

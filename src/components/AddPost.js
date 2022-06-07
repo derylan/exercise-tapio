@@ -37,13 +37,17 @@ const AddPost = () => {
         context.current.value = '';
     }
 
+    const deletePost = (id) => {
+        setPosts(posts.filter((post) => post.id !== id))
+    }
+
     return (
-        <div>
+        <div className='m-5'>
             <h2 className="text-3xl m-3 text-center">Share some thoughts</h2>
             <FormPost handlePost={handlePost} userName={userName} title={title} context={context}/>
             <h3 className="text-2xl m-2 underline">Our users shared thoughts:</h3>
             {posts.map((post) => (
-                <DisplayPost key={post.id} post={post} />
+                <DisplayPost key={post.id} post={post} onDelete={deletePost} />
             ))}
             
         </div>
