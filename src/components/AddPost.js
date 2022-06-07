@@ -32,14 +32,14 @@ const AddPost = () => {
         setPosts(prevPost => {
             return[...prevPost, {id: id, firstInput, secondInput, thirdInput}]
         })
-        firstInput.current.value = '';
-        secondInput.current.value = '';
-        thirdInput.current.value = '';
+        userName.current.value = '';
+        title.current.value = '';
+        context.current.value = '';
     }
 
     return (
         <div>
-            <h2 className="text-3xl m-3">Share some thoughts</h2>
+            <h2 className="text-3xl m-3 text-center">Share some thoughts</h2>
             <FormPost handlePost={handlePost} userName={userName} title={title} context={context}/>
             <h3 className="text-2xl m-2 underline">Our users shared thoughts:</h3>
             {posts.map((post) => (

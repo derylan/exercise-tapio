@@ -5,7 +5,7 @@ const FormPost = ( {handlePost, userName, title, context }) => {
         <>
         <form>
             <label htmlFor="uname">Author: </label>
-            <input className='border-2 border-black rounded text-sky-500' type="text" id="dname" ref={userName} />
+            <input className='border-2 border-black rounded text-sky-500' type="text" id="uname" ref={userName} />
             <label htmlFor="title">Title: </label>
             <input className='border-2 border-black rounded text-sky-500' type="text" id="title" ref={title} />
             <label htmlFor="thoughts">thoughts: </label>
