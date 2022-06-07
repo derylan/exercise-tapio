@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { v4 as uuidv4} from 'uuid'
+import DisplayPost from './DisplayPost'
 import FormPost from './FormPost'
 
 const AddPost = () => {
@@ -38,8 +39,13 @@ const AddPost = () => {
 
     return (
         <div>
-            <h2>Share some thoughts</h2>
+            <h2 className="text-3xl m-3">Share some thoughts</h2>
             <FormPost handlePost={handlePost} userName={userName} title={title} context={context}/>
+            <h3 className="text-2xl m-2 underline">Our users shared thoughts:</h3>
+            {posts.map((post) => (
+                <DisplayPost key={post.id} post={post} />
+            ))}
+            
         </div>
     )
 }   
