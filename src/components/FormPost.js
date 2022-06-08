@@ -11,16 +11,16 @@ const FormPost = ( {handlePost, userName, userTitle, context, setApiPosts, toggl
     return (
         <>
         <div className='grid place-items-center'>
-            <button className='rounded-full bg-cyan-500 hover:bg-cyan-600 w-1/6' onClick={() => {setToggle(!toggle)}}>{toggle ? 'Own Data' : 'API Data'}</button>
+            <button className='rounded-full text-white bg-cyan-500 hover:bg-cyan-600 w-1/6' onClick={() => {setToggle(!toggle)}}>{toggle ? 'Own Data' : 'API Data'}</button>
         </div>
         <form className='grid justify-items-center'>
             <label htmlFor="uname">Author: </label>
-            <input className='border-2 border-black rounded text-sky-500 w-1/4 ' type="text" id="uname" ref={userName} />
+            <input className='border-2 border-cyan-500 rounded text-sky-500 w-1/4 ' type="text" id="uname" ref={userName} />
             <label htmlFor="title">Title: </label>
-            <input className='border-2 border-black rounded text-sky-500 w-1/4' type="text" id="title" ref={userTitle} />
+            <input className='border-2 border-cyan-500 rounded text-sky-500 w-1/4' type="text" id="title" ref={userTitle} />
             <label htmlFor="thoughts">Thoughts: </label>
-            <input className='border-2 border-black rounded text-sky-500 w-1/4 h-24' type="text" id="thoughts" ref={context} /> <br />
-            <button className='rounded-full bg-cyan-500 hover:bg-cyan-600 w-1/6' onClick={handlePost}>Share</button>
+            <input className='border-2 border-cyan-500 rounded text-sky-500 w-1/4 h-24' type="text" id="thoughts" ref={context} /> <br />
+            <button className='rounded-full text-white bg-cyan-500 hover:bg-cyan-600 w-1/6' onClick={handlePost}>Share</button>
         </form>
         </>
     )
