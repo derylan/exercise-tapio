@@ -43,7 +43,7 @@ const AddPost = () => {
         setPosts(posts.filter((post) => post.id !== id))
     }
 
-    
+    //Intended to configure the edit mode
     // const [editForm, setEditForm] = useState(false);
     // const formEdit = () => {
     //     setEditForm(!editForm)
@@ -66,7 +66,7 @@ const AddPost = () => {
             toggle={toggle}
             />
             <h3 className="text-2xl m-2 underline text-center m-8">Our users shared thoughts:</h3>
-            <div className='grid grid-cols-5 h-auto w-auto p-2 border-2'>
+            <div className='grid grid-cols-5 h-auto w-auto p-2 border-2 border-cyan-500 bg-white/50'>
                 <h4 className='font-bold '>Name</h4>
                 <h4 className='font-bold '>Title</h4>
                 <h4 className='font-bold '>Post</h4>
