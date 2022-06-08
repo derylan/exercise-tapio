@@ -10,8 +10,10 @@ const FormPost = ( {handlePost, userName, userTitle, context, setApiPosts, toggl
 
     return (
         <>
-        <form className='grid justify-items-center'>
+        <div className='grid place-items-center'>
             <button className='rounded-full bg-sky-500 w-1/6' onClick={() => {setToggle(!toggle)}}>{toggle ? 'Own Data' : 'API Data'}</button>
+        </div>
+        <form className='grid justify-items-center'>
             <label htmlFor="uname">Author: </label>
             <input className='border-2 border-black rounded text-sky-500 w-1/4 ' type="text" id="uname" ref={userName} />
             <label htmlFor="title">Title: </label>
